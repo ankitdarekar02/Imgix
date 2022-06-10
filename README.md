@@ -3,7 +3,7 @@
 The project is developed using Angular 12.0.5
 
 # Features:
-•	It provides a cool feature of customizing images by changing the texts that features over them.
+•	It provides a cool feature of customizing images by changing the text that features over them.
 
 •	We can also change the overlay colour as per our choice from the color-picker.
 
