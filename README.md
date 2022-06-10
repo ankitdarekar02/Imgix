@@ -7,7 +7,8 @@ The project is developed using Angular 12.0.5
 
 •	We can also change the overlay colour as per our choice from the color-picker.
 
-# Project Link: https://imgix-visual-media.netlify.app/
+# Project Link: 
+https://imgix-visual-media.netlify.app/
 
 # Screenshots:
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/60542567/173069650-d87078ce-cd70-423e-840a-1e9e6d830b52.png">
