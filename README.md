@@ -2,9 +2,12 @@
 
 The project is developed using Angular 12.0.5
 
+# Features:
+•	It provides a cool feature of customizing images by changing the texts that features over them.
+
+•	We can also change the overlay colour as per our choice from the color-picker.
+
 Below are few screenshots of the project.
-It provides a cool feature of customizing images by changing the texts that features over them.
-You can also change the overlay colour as per your choice from the color-picker.
 
 Link to the project: https://imgix-visual-media.netlify.app/
 
