@@ -11,13 +11,17 @@ export class ImageContainerComponent implements OnInit {
   iframe!: ElementRef;
   @ViewChild('colorInputEl')
   colorInputEl!: ElementRef;
+  // default image overlay color
   colorInput: FormControl = new FormControl("00bba5");
   baseUrl: string = "";
   url: string = "";
   showModal: boolean = false;
   showPreview: boolean = false;
+  // default image text
   imgText: string = "Check out my sweet wings";
+  // default parameters for image url
   params: string = `?txt=${this.imgText}&blend=${this.colorInput.value}&w=640&txtclr=fff&txtalign=center%2Cmiddle&txtsize=48&bm=normal&balph=50`;
+  // list of images with their url
   imageList = [
     {'url': 'url(https://assets.imgix.net/examples/butterfly.jpg)', "title":"Butterfly", "src": "https://assets.imgix.net/examples/butterfly.jpg"},
     {'url': 'url(https://assets.imgix.net/unsplash/bridge.jpg)', "title":"Bridge", "src": "https://assets.imgix.net/unsplash/bridge.jpg"},
@@ -25,8 +29,10 @@ export class ImageContainerComponent implements OnInit {
     {'url': 'url(https://assets.imgix.net/unsplash/motorbike.jpg)', "title":"Motorbike", "src": "https://assets.imgix.net/unsplash/motorbike.jpg"},
     {'url': 'url(https://assets.imgix.net/unsplash/mountains.jpg)', "title":"Mountains", "src": "https://assets.imgix.net/unsplash/mountains.jpg"}
   ];
+  
   constructor() { }
 
+  // This function will open the selected image in the iframe
   openImage(src: string) {
     if(src) {
       this.showPreview = true;
@@ -36,6 +42,7 @@ export class ImageContainerComponent implements OnInit {
     }
   }
 
+  // generating new url as per selected image
   getNewUrl(url: string) {
     const newUrl = new URL(url);
     newUrl.searchParams.set('txt', this.imgText);
@@ -43,6 +50,7 @@ export class ImageContainerComponent implements OnInit {
     return newUrl;
   }
 
+  // fetches the user inputs and modifies the current image
   onSubmit() {
     const newUrl = this.getNewUrl(this.url);
     this.url = newUrl.origin + newUrl.pathname + newUrl.search;
@@ -50,10 +58,12 @@ export class ImageContainerComponent implements OnInit {
     this.closeModal();
   }
 
+  // opens popup
   openModal() {
     this.showModal = true;
   }
 
+  // closes popup
   closeModal() {
     this.showModal = false;
   }
