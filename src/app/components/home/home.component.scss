@@ -1,0 +1,24 @@
+
+.info-bg {
+    background-color: rgba(239, 238, 234, 0.25);
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    background-image: linear-gradient(90deg,rgba(0,0,0,.01),rgba(0,0,0,.1));
+}
+
+.info-wrapper {
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+}

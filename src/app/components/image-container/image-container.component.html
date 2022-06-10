@@ -1,0 +1,61 @@
+<div class="container image-wrapper">
+    <p class="title">Select from a range of Imgix Images</p>
+    <div class="row">
+        <div class="col-sm-2 col-xs-1 mb-2" *ngFor="let image of imageList">
+            <div class="image-holder" [ngStyle]="{'background-image': image.url}" (click)="openImage(image.src)">
+            </div>
+            <div class="image-title">
+                <span>{{image.title}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- iframe -->
+<div class="container iframe-wrapper">
+    <div class="row">
+        <div class="col-md-7 col-xs-12">
+            <iframe #iframe height="600" width="100%"></iframe>
+        </div>
+        <div class="col-md-5 col-xs-12">
+            <div *ngIf="showPreview">
+                <button class="btn custom-btn" (click)="openModal()" >Customize this Template</button>
+                <div class="mt-2">
+                    <p><i class="fa fa-edit"></i> 100% fully customizable.</p>
+                    <p><i class="fa fa-mobile"></i> Edit and download on the go.</p>
+                    <p><i class="fa fa-share-alt"></i> Share and publish anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" [ngClass]="{'show' : showModal}" id="exampleModal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Image Customization</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="closeModal()"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group purple-border">
+                    <label for="imageText">Enter Text</label>
+                    <input type="text" [(ngModel)]="imgText" id="imageText" placeholder="type text here" class="form-control">
+                </div>
+                <div class="form-group mt-3 overlay-color-input">
+                    <label for="overlay-color">Select Overlay Color:</label>
+                    <input #colorInputEl [formControl]="colorInput" id="overlay-color" matInput type="color"
+                    placeholder="Choose Color"/>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    (click)="closeModal()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="onSubmit()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
