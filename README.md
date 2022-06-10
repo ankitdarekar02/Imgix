@@ -1,27 +1,25 @@
 # Imgix
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+The project is developed using Angular 12.0.5
 
-## Development server
+# Features:
+•	It provides a cool feature of customizing images by changing the text that features over them.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+•	We can also change the overlay colour as per our choice from the color-picker.
 
-## Code scaffolding
+# Project Link: 
+https://imgix-visual-media.netlify.app/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Screenshots:
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/60542567/173069650-d87078ce-cd70-423e-840a-1e9e6d830b52.png">
 
-## Build
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/60542567/173069594-64d98c51-ad0a-4c24-8d16-f5ceff85c1d9.png">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/60542567/173069720-71f996f0-665f-495b-b40d-b020a86f7535.png">
 
-## Running unit tests
+<img width="313" alt="image" src="https://user-images.githubusercontent.com/60542567/173069975-e5a12d7a-99d6-4f75-84d2-92ec3a450062.png">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
